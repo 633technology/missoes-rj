@@ -96,7 +96,7 @@ function App() {
 
   useEffect(() => {
     // Load IBA data
-    Papa.parse('src/assets/ibas_para_mapa.csv', {
+    Papa.parse('../src/assets/ibas_para_mapa.csv', {
       download: true,
       header: true,
       complete: (results) => {
@@ -657,5 +657,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
