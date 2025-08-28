@@ -566,7 +566,15 @@ function App() {
           zoom={10}
           className="h-full w-full"
           ref={mapRef}
-        >
+           // Adicione estas props para mobile:
+          touchZoom={true}
+          zoomControl={true}
+          dragging={true}
+          scrollWheelZoom={false} // Desabilita zoom com scroll no mobile
+          doubleClickZoom={true}
+          boxZoom={true}
+          keyboard={false} // Pode causar problemas no mobile
+                >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -660,5 +668,6 @@ function App() {
 
 
 export default App;
+
 
 
