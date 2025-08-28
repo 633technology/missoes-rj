@@ -96,7 +96,7 @@ function App() {
 
   useEffect(() => {
     // Load IBA data
-    Papa.parse('../src/assets/ibas_para_mapa.csv', {
+    Papa.parse('../assets/ibas_para_mapa.csv', {
       download: true,
       header: true,
       complete: (results) => {
@@ -110,7 +110,7 @@ function App() {
     });
 
     // Load bairros data
-    Papa.parse('src/assets/bairros_para_mapa.csv', {
+    Papa.parse('../assets/bairros_para_mapa.csv', {
       download: true,
       header: true,
       complete: (results) => {
@@ -134,7 +134,7 @@ function App() {
     });
 
     // Load GeoJSON data
-    fetch('src/assets/limites_bairros_rj.geojson')
+    fetch('../assets/limites_bairros_rj.geojson')
       .then(response => response.json())
       .then(data => {
         setGeoJsonData(data);
@@ -660,3 +660,4 @@ function App() {
 
 
 export default App;
+
